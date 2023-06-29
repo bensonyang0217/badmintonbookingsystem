@@ -4,7 +4,14 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+/*
+if you don't use db you can use exclude DataSourceAutoConfiguration.
+EX: @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+*
+*
+*/
+
+@SpringBootApplication
 public class BadmintonbookingsystemApplication {
 
 	public static void main(String[] args) {
