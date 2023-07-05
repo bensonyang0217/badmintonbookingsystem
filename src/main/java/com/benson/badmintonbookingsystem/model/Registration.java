@@ -2,10 +2,12 @@ package com.benson.badmintonbookingsystem.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Entity
 @Data
-public class Registration {
+@EqualsAndHashCode(callSuper = false)
+public class Registration extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long registration_id;

@@ -2,13 +2,15 @@ package com.benson.badmintonbookingsystem.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Data
-public class BadmintonSession {
+@EqualsAndHashCode(callSuper = false)
+public class BadmintonSession extends BaseEntity{
 
 
     @Id

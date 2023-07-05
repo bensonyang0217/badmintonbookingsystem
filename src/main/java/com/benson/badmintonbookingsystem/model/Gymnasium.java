@@ -5,10 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import lombok.Data;
 import jakarta.persistence.Id;
+import lombok.EqualsAndHashCode;
 
 @Entity
 @Data
-public class Gymnasium {
+@EqualsAndHashCode(callSuper = false)
+public class Gymnasium extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long gymnasium_id;

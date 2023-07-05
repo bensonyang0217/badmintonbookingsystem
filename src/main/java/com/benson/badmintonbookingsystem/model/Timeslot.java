@@ -5,13 +5,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 
 import java.time.LocalTime;
 
 @Entity
 @Data
-public class Timeslot {
+@EqualsAndHashCode(callSuper = false)
+public class Timeslot extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

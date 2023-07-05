@@ -2,13 +2,15 @@ package com.benson.badmintonbookingsystem.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Data
-public class User {
+@EqualsAndHashCode(callSuper = false)
+public class User extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long user_id;
